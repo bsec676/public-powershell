@@ -16,7 +16,7 @@ Get-AzureADMSDeletedGroup -Id "GUID"
 Restore-AzureADMSDeletedDirectoryObject –Id "GUID"
 
 #Change Name and alias of group and update all emails addresses
-Set-UnifiedGroup -Identity "New Group Name"  -Alias "NewAlias" -EmailAddresses email1@company.com,email1@company.onmicrosoft.com
+Set-UnifiedGroup -Identity "New Group Name"  -Alias "NewAlias" -EmailAddresses email1@company.com, email1@company.onmicrosoft.com
 
 #Show All Group Attributes
 Get-UnifiedGroup -Identity "DisplayName" | Format-List 
