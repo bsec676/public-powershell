@@ -2,8 +2,15 @@
 $AZCreds = Get-Credential
 Connect-AzureAD -Credential $AZCreds
 
+#Browsing file
+Add-Type -AssemblyName System.Windows.Forms
+$FileBrowser = New-Object System.Windows.Forms.OpenFileDialog
+$FileBrowser.filter = "CSV (*.csv)| *.csv"
+[void]$FileBrowser.ShowDialog()
+$FileBrowser.FileName
+
 # Get CSV content
-$CSVrecords = Import-Csv "users.csv" -Delimiter ","
+$CSVrecords = Import-Csv $FileBrowser.FileName -Delimiter ","
 
 # Create arrays for skipped and failed users
 $SkippedUsers = @()
