@@ -1,0 +1,3 @@
+#TYPE Selected.Microsoft.Online.Administration.User
+"DisplayName","UserPrincipalName","MFA Status","Department"
+"DisplayName","email@company.com","Disabled","Department"
